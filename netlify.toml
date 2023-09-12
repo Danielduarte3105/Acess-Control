@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/PDD-UNIFECAF.html"
+status = 200
