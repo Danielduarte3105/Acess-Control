@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code</h1>
+        <div id="qrcode"></div>
+    </div>
+
+    <script>
+        // script.js
+        const qrcodeDiv = document.getElementById('qrcode');
+
+        // Função para gerar QR code automaticamente
+        function generateQRCode(text) {
+            qrcodeDiv.innerHTML = ''; // Limpa qualquer QR Code anterior
+            const qrcode = new QRCode(qrcodeDiv, {
+                text: text,
+                width: 128,
+                height: 128
+            });
+        }
+
+        // Gere um QR code automaticamente, por exemplo, com o texto "Hello, World!"
+        generateQRCode("Hello, World!");
+
+    </script>
+
+</body>
+</html>
