@@ -67,7 +67,7 @@
         </div>
         
         <div class="support">
-            <button class="supportbt"><img src="" alt="">Suporte</button>
+            <button class="supportbt" id="supportbt"><img src="" alt="">Suporte</button>
         </div>
 
     </div>
@@ -106,6 +106,24 @@
     // Abre a página em um pop-up
     window.open(url, 'aboutDev.html', windowFeatures);
     });
+
+     
+        document.getElementById('supportbt').addEventListener('click', function () {
+    // URL da página que você deseja abrir em um pop-up
+    const url = 'Suporte.html';
+
+    const popupWidth = 233;
+    const popupHeight = 280;
+
+    const left = (window.innerWidth - popupWidth) / 2;
+    const top = (window.innerHeight - popupHeight) / 2;
+    // Configurações para a janela do pop-up
+    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    // Abre a página em um pop-up
+    window.open(url, 'Suporte.html', windowFeatures);
+    });
+        
     </script>
     
 </body>
