@@ -54,19 +54,19 @@
     <br>
     <div id="containerConfig">
         
-        <div class="aboutAPP">
+        <div class="aboutAPP" id='SobreAppbt'>
             <button class="aboutAPPbt" id="SobreApp"><img src="" alt="">Sobre | APP </button>
         </div>
         
-        <div class="aboutDev">
+        <div class="aboutDev" id='SobreDevbt'>>
             <button class="aboutDEVbt" id="SobreDev"><img src="" alt="">Sobre | Desenvolvedores </button>
         </div>
         
-        <div class="colors">
+        <div class="colors" id='Coresbt'>>
             <button class="colorsbt"><img src="" alt="">Cores</button>
         </div>
         
-        <div class="support">
+        <div class="support" id='Suportebt'>>
             <button class="supportbt"><img src="" alt="">Suporte</button>
         </div>
 
@@ -106,6 +106,30 @@
 
     // Abre a página em um pop-up
     window.open(url, 'aboutDev.html', windowFeatures);
+    });
+
+     // Botão Sobre APP
+    document.getElementById('SobreAppbt').addEventListener('click', function() {
+        alert('Clicou em Sobre | APP');
+        // Coloque o código que deseja executar ao clicar no botão aqui
+    });
+
+    // Botão Sobre Desenvolvedores
+    document.getElementById('SobreDevbt').addEventListener('click', function() {
+        alert('Clicou em Sobre | Desenvolvedores');
+        // Coloque o código que deseja executar ao clicar no botão aqui
+    });
+
+    // Botão Cores
+    document.getElementById('Coresbt').addEventListener('click', function() {
+        alert('Clicou em Cores');
+        // Coloque o código que deseja executar ao clicar no botão aqui
+    });
+
+    // Botão Suporte
+    document.getElementById('Suportebt').addEventListener('click', function() {
+        alert('Clicou em Suporte');
+        // Coloque o código que deseja executar ao clicar no botão aqui
     });
     
     </script>
