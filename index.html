@@ -6,15 +6,6 @@
     <title>Controle de Acesso</title>
     <style>
 
-
-        .container{
-            width: 95%;
-            max-width: 1280px;
-            margin: 0 auto;
-            display: block;
-            position: relative;
-        }
-        
         /* Estilize o cabeçalho (nav) */
         .navbar {
             background-color: #0b5392; /* Define a cor de fundo como azul */
@@ -117,19 +108,24 @@
         }
 
         section, .rodape {
-            display: block;
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
         }
 
-        .BotoesCentro {
-            display: block;
-            width: 250px 3;
+        .line1 .line2 .line3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .botoesRodape {
-            display: block;
-            columns: 250px 3;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
         }
 
         .rodape {
@@ -142,8 +138,6 @@
 
         .Initial1, .Carteira1, .QrCode1, .Config1{
             margin: 1.3px 10px;
-            display: block;
-            width: 100%;
         }
 
     </style>
@@ -172,11 +166,15 @@
 
 
         <div class="buttonsGlobal">
-            <section class="BotoesCentro">
+            <section class="line1">
                 <button class="QrCode" id="QrCode" ><img src="" alt="">QrCode</button>
                 <button class="NFs"><img src="" alt="">NFs</button>
+            </section>
+            <section class="line2">
                 <button class="Carteira"><img src="" alt="">Carteira</button>
                 <button class="Cadastro"><img src="" alt="">Cadastro</button>
+            </section>
+            <section class="line3">
                 <button class="Foto"><img src="" alt="">Foto</button>
                 <button class="Config"><img src="" alt="">Config</button>
             </section>
@@ -185,13 +183,11 @@
         <br><br>
 
         <footer class="rodape">
-            <div class="container">
             <div class="botoesRodape">
                 <button class="Initial1"><img src="" alt="">Inicio</button>
                 <button class="Carteira1"><img src="" alt="">Carteira</button>
                 <button class="QrCode1" id="QrCode1"><img src="" alt="">QrCode</button>
                 <button class="Config1"><img src="" alt="">Config</button>
-            </div>
             </div>
         </footer>
 
