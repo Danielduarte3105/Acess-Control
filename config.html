@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <style>
+        body, html {
+            height: 95%; /* Garante que o corpo e o HTML ocupem 100% da altura da tela */
+            margin: auto 0; /* Remove margens padrão do corpo */
+        }
+    
+        .containerConfig {
+            height: 95%;
+            background-color: rgb(228, 228, 228);
+            display: block;
+            width: 250px 3;
+            /* justify-content: center;
+            align-items: center;
+            flex-direction: column; */
+        }
+    
+        .aboutAPP, .aboutDev, .colors, .support {
+            margin: 10px 0;
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            max-width: 300px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            /* width: 95%; Assegura que a largura seja 95% do containerConfig */
+        }
+    
+        .aboutAPPbt, .aboutDEVbt, .colorsbt, .supportbt {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    
+        .aboutAPPbt img, .aboutDEVbt img, .colorsbt img, .supportbt img {
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+        }
+    
+        .aboutAPPbt:focus, .aboutDEVbt:focus, .colorsbt:focus, .supportbt:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="containerConfig">
+        
+        <div class="aboutAPP">
+            <button class="aboutAPPbt"><img src="" alt="">Sobre | APP </button>
+        </div>
+        
+        <div class="aboutDev">
+            <button class="aboutDEVbt"><img src="" alt="">Sobre | Desenvolvedores </button>
+        </div>
+        
+        <div class="colors">
+            <button class="colorsbt"><img src="" alt="">Cores</button>
+        </div>
+        
+        <div class="support">
+            <button class="supportbt"><img src="" alt="">Suporte</button>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
