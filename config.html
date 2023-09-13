@@ -55,7 +55,7 @@
     <div id="containerConfig">
         
         <div class="aboutAPP">
-            <button class="aboutAPPbt"><img src="" alt="">Sobre | APP </button>
+            <button class="aboutAPPbt"><img src="" alt="" id="Sobre App">Sobre | APP </button>
         </div>
         
         <div class="aboutDev">
@@ -71,7 +71,27 @@
         </div>
 
     </div>
+
+    <script>
+        
+    document.getElementById('Sobre App').addEventListener('click', function () {
+    // URL da página que você deseja abrir em um pop-up
+    const url = 'about.html';
+
+    const popupWidth = 310;
+    const popupHeight = 320;
+
+    const left = (window.innerWidth - popupWidth) / 2;
+    const top = (window.innerHeight - popupHeight) / 2;
+
+    // Configurações para a janela do pop-up
+    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    // Abre a página em um pop-up
+    window.open(url, 'about.html', windowFeatures);
+    });
     
+    </script>
     
 </body>
 </html>
