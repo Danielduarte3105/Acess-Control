@@ -59,7 +59,7 @@
         </div>
         
         <div class="aboutDev">
-            <button class="aboutDEVbt"><img src="" alt="">Sobre | Desenvolvedores </button>
+            <button class="aboutDEVbt" id="SobreDev"><img src="" alt="">Sobre | Desenvolvedores </button>
         </div>
         
         <div class="colors">
@@ -89,6 +89,23 @@
 
     // Abre a página em um pop-up
     window.open(url, 'about.html', windowFeatures);
+    });
+
+        document.getElementById('SobreDev').addEventListener('click', function () {
+    // URL da página que você deseja abrir em um pop-up
+    const url = 'aboutDev.html';
+
+    const popupWidth = 233;
+    const popupHeight = 280;
+
+    const left = (window.innerWidth - popupWidth) / 2;
+    const top = (window.innerHeight - popupHeight) / 2;
+
+    // Configurações para a janela do pop-up
+    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    // Abre a página em um pop-up
+    window.open(url, 'aboutDev.html', windowFeatures);
     });
     
     </script>
