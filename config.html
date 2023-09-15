@@ -54,19 +54,19 @@
     <br>
     <div id="containerConfig">
         
-        <div class="aboutAPP">
+        <div class="aboutAPP" id="aboutDiv">
             <button class="aboutAPPbt" id="SobreApp"><img src="" alt="">Sobre | APP </button>
         </div>
         
-        <div class="aboutDev">
+        <div class="aboutDev" id="aboutDevDiv">
             <button class="aboutDEVbt" id="SobreDev"><img src="" alt="">Sobre | Desenvolvedores </button>
         </div>
         
-        <div class="colors">
-            <button class="colorsbt"><img src="" alt="">Cores</button>
+        <div class="colors" id="colorsDiv">
+            <button class="colorsbt" id="sobreColors"><img src="" alt="">Cores</button>
         </div>
         
-        <div class="support">
+        <div class="support" id="supportDiv">
             <button class="supportbt" id="supportbt"><img src="" alt="">Suporte</button>
         </div>
 
@@ -74,56 +74,85 @@
 
     <script>
         
-    document.getElementById('SobreApp').addEventListener('click', function () {
-    // URL da página que você deseja abrir em um pop-up
-    const url = 'about.html';
+    var sobreApp = document.getElementById('SobreApp')
+    var sobreDev = document.getElementById('SobreDev')
+    var supportbt = document.getElementById('supportbt')
+    var sobreColors = document.getElementById('sobreColors')
+    
+    SobreApp.addEventListener('click', function () {
+        // URL da página que você deseja abrir em um pop-up
+        const url = 'about.html';
 
-    const popupWidth = 233;
-    const popupHeight = 280;
+        const popupWidth = 233;
+        const popupHeight = 280;
 
-    const left = (window.innerWidth - popupWidth) / 2;
-    const top = (window.innerHeight - popupHeight) / 2;
+        const left = (window.innerWidth - popupWidth) / 2;
+        const top = (window.innerHeight - popupHeight) / 2;
 
-    // Configurações para a janela do pop-up
-    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+        // Configurações para a janela do pop-up
+        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
 
-    // Abre a página em um pop-up
-    window.open(url, 'about.html', windowFeatures);
+        // Abre a página em um pop-up
+        window.open(url, 'about.html', windowFeatures);
     });
 
-        document.getElementById('SobreDev').addEventListener('click', function () {
-    // URL da página que você deseja abrir em um pop-up
-    const url = 'aboutDev.html';
+    sobreDev.addEventListener('click', function () {
+        // URL da página que você deseja abrir em um pop-up
+        const url = 'aboutDev.html';
 
-    const popupWidth = 233;
-    const popupHeight = 280;
+        const popupWidth = 233;
+        const popupHeight = 280;
 
-    const left = (window.innerWidth - popupWidth) / 2;
-    const top = (window.innerHeight - popupHeight) / 2;
-    // Configurações para a janela do pop-up
-    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+        const left = (window.innerWidth - popupWidth) / 2;
+        const top = (window.innerHeight - popupHeight) / 2;
+        // Configurações para a janela do pop-up
+        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
 
-    // Abre a página em um pop-up
-    window.open(url, 'aboutDev.html', windowFeatures);
+        // Abre a página em um pop-up
+        window.open(url, 'aboutDev.html', windowFeatures);
     });
 
      
-        document.getElementById('supportbt').addEventListener('click', function () {
-    // URL da página que você deseja abrir em um pop-up
-    const url = 'Suporte.html';
+    document.getElementById('supportbt').addEventListener('click', function () {
+        // URL da página que você deseja abrir em um pop-up
+        const url = 'Suporte.html';
 
-    const popupWidth = 233;
-    const popupHeight = 5;
+        const popupWidth = 233;
+        const popupHeight = 5;
 
-    const left = (window.innerWidth - popupWidth) / 2;
-    const top = (window.innerHeight - popupHeight) / 2;
-    // Configurações para a janela do pop-up
-    const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+        const left = (window.innerWidth - popupWidth) / 2;
+        const top = (window.innerHeight - popupHeight) / 2;
+        // Configurações para a janela do pop-up
+        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
 
-    // Abre a página em um pop-up
-    window.open(url, 'Suporte.html', windowFeatures);
+        // Abre a página em um pop-up
+        window.open(url, 'Suporte.html', windowFeatures);
     });
-        
+
+    
+    // Botão Sobre APP
+    document.getElementById('aboutDiv').addEventListener('click', function() {
+        sobreApp.click();
+    });
+
+    // Botão Sobre Desenvolvedores
+    document.getElementById('aboutDevDiv').addEventListener('click', function() {
+        sobreDev.click();
+    });
+
+    // Botão Cores
+    document.getElementById('colorsDiv').addEventListener('click', function() {
+        /*sobreColors.addEventListener('click', function () {
+            alert("Botão de colors está funcionando corretamente")
+        });*/
+        sobreColors.click();
+    });
+
+    // Botão Suporte
+    document.getElementById('supportDiv').addEventListener('click', function() {
+        supportbt.click();
+    });
+
     </script>
     
 </body>
