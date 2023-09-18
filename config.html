@@ -24,7 +24,7 @@
         .aboutAPP, .aboutDev, .colors, .support {
             margin: 10px 0;
             text-align: center;
-            border: 2px solid black;
+            border: 2px solid rgb(99, 99, 99);
             padding: 20px;
             max-width: 300px;
             background-color: white;
@@ -48,6 +48,19 @@
         .aboutAPPbt:focus, .aboutDEVbt:focus, .colorsbt:focus, .supportbt:focus {
             outline: none;
         }
+
+        #icon {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #colorsDiv {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +76,8 @@
         </div>
         
         <div class="colors" id="colorsDiv">
-            <button class="colorsbt" id="sobreColors"><img src="" alt="">Cores</button>
+            <button class="colorsbt" id="sobreColors"><img src="" alt="">Modo Escuro</button>
+            <img src="lua.png" alt="imagem_de_lua" id="icon">
         </div>
         
         <div class="support" id="supportDiv">
@@ -72,88 +86,7 @@
 
     </div>
 
-    <script>
-        
-    var sobreApp = document.getElementById('SobreApp')
-    var sobreDev = document.getElementById('SobreDev')
-    var supportbt = document.getElementById('supportbt')
-    var sobreColors = document.getElementById('sobreColors')
-    
-    SobreApp.addEventListener('click', function () {
-        // URL da página que você deseja abrir em um pop-up
-        const url = 'about.html';
-
-        const popupWidth = 233;
-        const popupHeight = 280;
-
-        const left = (window.innerWidth - popupWidth) / 2;
-        const top = (window.innerHeight - popupHeight) / 2;
-
-        // Configurações para a janela do pop-up
-        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
-
-        // Abre a página em um pop-up
-        window.open(url, 'about.html', windowFeatures);
-    });
-
-    sobreDev.addEventListener('click', function () {
-        // URL da página que você deseja abrir em um pop-up
-        const url = 'aboutDev.html';
-
-        const popupWidth = 233;
-        const popupHeight = 280;
-
-        const left = (window.innerWidth - popupWidth) / 2;
-        const top = (window.innerHeight - popupHeight) / 2;
-        // Configurações para a janela do pop-up
-        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
-
-        // Abre a página em um pop-up
-        window.open(url, 'aboutDev.html', windowFeatures);
-    });
-
-     
-    document.getElementById('supportbt').addEventListener('click', function () {
-        // URL da página que você deseja abrir em um pop-up
-        const url = 'Suporte.html';
-
-        const popupWidth = 233;
-        const popupHeight = 5;
-
-        const left = (window.innerWidth - popupWidth) / 2;
-        const top = (window.innerHeight - popupHeight) / 2;
-        // Configurações para a janela do pop-up
-        const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
-
-        // Abre a página em um pop-up
-        window.open(url, 'Suporte.html', windowFeatures);
-    });
-
-    
-    // Botão Sobre APP
-    document.getElementById('aboutDiv').addEventListener('click', function() {
-        sobreApp.click();
-    });
-
-    // Botão Sobre Desenvolvedores
-    document.getElementById('aboutDevDiv').addEventListener('click', function() {
-        sobreDev.click();
-    });
-
-    // Botão Cores
-    document.getElementById('colorsDiv').addEventListener('click', function() {
-        /*sobreColors.addEventListener('click', function () {
-            alert("Botão de colors está funcionando corretamente")
-        });*/
-        sobreColors.click();
-    });
-
-    // Botão Suporte
-    document.getElementById('supportDiv').addEventListener('click', function() {
-        supportbt.click();
-    });
-
-    </script>
+    <script src="config.js"></script>
     
 </body>
 </html>
