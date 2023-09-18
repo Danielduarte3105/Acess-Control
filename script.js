@@ -72,16 +72,19 @@ window.open(url, 'config.html', windowFeatures);
 let escuro = document.getElementById('Escuro1')
 let darkMode = 0
 const body = document.body
+let imgCenter = document.getElementById('img-center')
 
 escuro.addEventListener('click', function () {
     if (darkMode === 0) {
         body.style.backgroundColor = "#000000";
         escuro.innerText = "Modo Claro";
+        imgCenter.src = "Preto Glitch Rua Logotipo.png"
         //icon.src = 'sol.png'
         darkMode = 1;
     } else {
         body.style.backgroundColor = "#fff";
         escuro.innerText = "Modo Escuro";
+        imgCenter.src = "logo-og.png"
         //icon.src = 'lua.png'
         darkMode = 0;
     }
