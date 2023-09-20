@@ -81,10 +81,10 @@
         font-size: 13px;
         margin-top: 0;
         color: #fff;
-        transition: all 0.3s ease out;
+        transition: all 0.3s ease-in;
         }
 
-        button {
+        #submit {
         background-color: transparent;
         border-color: #fff;
         color: #fff;
@@ -94,11 +94,11 @@
         margin-top: 20px;
         border-radius: 4px;
         cursor: pointer;
-        transition: all 0.3s ease out;
+        transition: all 0.3s ease-in;
         outline: none;
         }
 
-        button:hover {
+        #submit:hover {
         background-color: #272262;
         color: #fff;
         }
@@ -129,6 +129,13 @@
         color: #272262;
         }
 
+        .label-float {
+            color: #fff;
+        }
+
+        .label-float input {
+            color: #fff;
+        }
         </style>
 
 </head>
@@ -149,11 +156,29 @@
           </div>
       
           <div class="justify-center">
-            <button>Entrar</button>
-          </div>
+            <input type="submit" id="submit" onclick="verificarLogin()">
+            <label for="submit"></label>
+            </div>
           <br>
-      
         </div>
       </div>
+
+      <script>
+        function verificarLogin() {
+            let inputUsuario = document.getElementById('Login').value;
+            let inputSenha = document.getElementById('Senha').value;
+
+            let user = {
+                usuario: "admin",
+                senha: 1234
+            }
+
+            if (inputUsuario === user.usuario && inputSenha == user.senha) {
+                window.location.href = 'index.html';
+            } else {
+                window.alert("Login falhou. Por favor, verifique seu nome de usuário e senha.");
+            }
+        }
+      </script>
 </body>
 </html>
