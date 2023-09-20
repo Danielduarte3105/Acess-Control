@@ -95,14 +95,6 @@
             background-color: #FF851B; /* Cor de fundo laranja para Carteira */
         }
 
-        button.Cadastro {
-            background-color: #6e610b; /* Cor de fundo mostarda para Cadastro */
-        }
-
-        button.Foto {
-            background-color: #1b7294; /* Cor de fundo azul clara para Foto */
-        }
-
         button.Config {
             background-color: #B10DC9; /* Cor de fundo roxa para Config */
         }
@@ -135,12 +127,19 @@
             flex-direction: row; */
             width: 250px 2;
             margin: 1px 1px;
+            margin-top: 100px;
         }
 
         .Initial1, .Carteira1, .QrCode1, .Config1, .Escuro1{
             display: block;
             margin: 20px 8px;
             width: 95%;
+        }
+
+        @media only screen and (max-width: 1024px) { 
+            .rodape {
+                margin-top: 50px;
+            }
         }
         
     </style>
@@ -175,10 +174,6 @@
             </section>
             <section class="line2">
                 <button class="Carteira"><img src="" alt="">Carteira</button>
-                <button class="Cadastro"><img src="" alt="">Cadastro</button>
-            </section>
-            <section class="line3">
-                <button class="Foto"><img src="" alt="">Foto</button>
                 <button class="Config" id="Config"><img src="" alt="">Config</button>
             </section>
         </div>
