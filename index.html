@@ -125,11 +125,12 @@
             width: 250px 2;
             margin: 1px 1px;
             margin-top: 100px;
-            height: 14%;
+            height: 12%;
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
+            margin-bottom: 10px;
         }
 
         .Initial1, .Carteira1, .QrCode1, .Config1, .Escuro1{
@@ -191,7 +192,7 @@
     </style>
 </head>
 
-<body>
+<body onclick="FecharVazio()">
 
     <div class="container">
         <nav class="navbar">
@@ -238,7 +239,7 @@
         <!-- Componentes de PopUps que aparecem quando são chamados -->
         <iframe id="configQrCode" src="QrCode.html" frameborder="1"></iframe>
         <iframe id="configFrame" src="config.html" frameborder="1"></iframe>
-        <span id="x-button"><button id="closePopUp">X</button></span>
+        <span id="x-button"><button id="closePopUp" onclick="FecharPop()">X</button></span>
 
     </div>
 
