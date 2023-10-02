@@ -75,7 +75,7 @@
 
         // Função para gerar QR code com texto aleatório
         function generateRandomQRCode() {
-            const randomNumber = Math.floor(Math.random() * 99) + 1; // Número aleatório de 1 a 99
+            const randomNumber = Math.floor(Math.random() * 999999999999) + 1; // Número aleatório de 1 a 99999999999
             const randomText = `#${randomNumber.toString().padStart(2, '0')}`;
             qrcodeDiv.innerHTML = ''; // Limpa qualquer QR Code anterior
             const qrcode = new QRCode(qrcodeDiv, {
