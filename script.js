@@ -9,13 +9,13 @@ escuro.addEventListener('click', function () {
         body.style.buttons = "#fff";
         body.style.backgroundColor = "#000000";
         escuro.innerText = "Modo Claro";
-        imgCenter.src = "Preto Glitch Rua Logotipo.png"
+        imgCenter.src = "nxs.png"
         darkMode = 1;
     } else {
         body.style.buttons = "#000000";
         body.style.backgroundColor = "#fff";
         escuro.innerText = "Modo Escuro";
-        imgCenter.src = "logo-og.png"
+        imgCenter.src = "nxs.png"
         darkMode = 0;
     }
 });
