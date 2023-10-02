@@ -6,7 +6,6 @@
     <title>Gerador de QR Code</title>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
-
     <style>
         /* styles.css */
         body {
@@ -36,34 +35,38 @@
             display: flex;
             align-items: center;
         }
-
     </style>
-
 </head>
 <body>
     <div class="container">
         <h1>QR Code</h1>
         <div id="qrcode"></div>
+        <button id="generateButton">Gerar QR Code Aleatório</button>
     </div>
 
     <script>
         // script.js
         const qrcodeDiv = document.getElementById('qrcode');
+        const generateButton = document.getElementById('generateButton');
 
-        // Função para gerar QR code automaticamente
-        function generateQRCode(text) {
+        // Função para gerar QR code com texto aleatório
+        function generateRandomQRCode() {
+            const randomNumber = Math.floor(Math.random() * 99) + 1; // Número aleatório de 1 a 99
+            const randomText = `#${randomNumber.toString().padStart(2, '0')}`;
             qrcodeDiv.innerHTML = ''; // Limpa qualquer QR Code anterior
             const qrcode = new QRCode(qrcodeDiv, {
-                text: text,
+                text: randomText,
                 width: 128,
                 height: 128
             });
         }
 
-        // Gere um QR code automaticamente, por exemplo, com o texto "Hello, World!"
-        generateQRCode();
+        // Gerar QR code ao clicar no botão
+        generateButton.addEventListener('click', generateRandomQRCode);
+
+        // Gerar QR code automaticamente na inicialização
+        generateRandomQRCode();
 
     </script>
-
 </body>
 </html>
