@@ -6,11 +6,13 @@ let imgCenter = document.getElementById('img-center')
 
 escuro.addEventListener('click', function () {
     if (darkMode === 0) {
+        body.style.buttons = "#fff";
         body.style.backgroundColor = "#000000";
         escuro.innerText = "Modo Claro";
         imgCenter.src = "Preto Glitch Rua Logotipo.png"
         darkMode = 1;
     } else {
+        body.style.buttons = "#000000";
         body.style.backgroundColor = "#fff";
         escuro.innerText = "Modo Escuro";
         imgCenter.src = "logo-og.png"
